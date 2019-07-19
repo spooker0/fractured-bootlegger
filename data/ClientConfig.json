@@ -1,0 +1,21 @@
+{
+	"regions": [
+		"lon",
+		"ams",
+		"sto",
+		"nyc",
+		"dal",
+		"chg",
+		"lax",
+		"sing",
+		"syd"
+	],
+	"matchmakingHopperSize": 2,
+	"matchmakingLatitude": 0,
+	"matchmakingLongitude": 0,
+	"matchmakingLocationOverride": false,
+	"matchmakingRegionOverride": false,
+	"active": true,
+	"matchMaking": false,
+	"environment": "live"
+}

@@ -1,0 +1,2153 @@
+.view-startgame .container-overlay {
+  background: rgba(0, 0, 0, .8);
+}
+
+.view-startgame .view-content {
+  padding: 30px;
+}
+
+.position-overlay.visible.view-startgame .container-overlay > .view-content.minimise {
+  animation-duration: 120ms;
+  animation-name: overlay-minimise;
+}
+
+@-webkit-keyframes overlay-minimise {
+  0% {
+    opacity: 1;
+    transform: treanslateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.25, 0);
+  }
+}
+
+.view-startgame .main {
+  position: relative;
+  width: 750px;
+  height: 750px;
+  z-index: 1010;
+}
+
+.view-startgame .main:not([data-game-mode="customMatch"]) .show-on-custom,
+.view-startgame .main[data-game-mode="customMatch"] .hide-on-custom {
+  display: none;
+}
+
+.view-startgame .main:not([data-game-mode="coopVsAi"]) .show-on-quickplay,
+.view-startgame:not([data-is-quick-play-coop="true"]) .main:not([data-game-mode="coopVsAi"]) .show-on-quickplay,
+.view-startgame:not([data-is-quick-play-coop="true"]) .main:not([data-game-mode="coopVsAi"]) .show-on-quickplay,
+.view-startgame[data-is-quick-play-coop="true"] .main[data-game-mode="coopVsAi"] .hide-on-quickplay {
+  display: none;
+}
+
+.view-startgame .grid {
+  z-index: -1;
+}
+
+.view-startgame .gamemode-title {
+  padding-right: 240px;
+  display: none;
+}
+
+.view-startgame .main[data-has-content="false"] .gamemode-title, .view-startgame [data-game-mode="fracturedSpace"] .gamemode-title, .view-startgame [data-game-mode="customMatch"] .gamemode-title, .view-startgame.owner-true [data-show-carousel="true"] .gamemode-title, .view-startgame .main[data-has-sub-modes="false"] .sub-gamemodes, .view-startgame .main[data-game-modes="coopVsAi"] .sub-gamemodes {
+  display: none;
+}
+
+.view-startgame [data-show-carousel="false"] .gamemode-title, .view-startgame.owner-false [data-show-carousel="false"] .gamemode-title, .view-startgame.owner-false [data-show-carousel="true"] .gamemode-title {
+  display: block;
+}
+
+.view-startgame #game-mode-carousel {
+  height: 78px;
+  margin-right: 240px;
+  position: relative;
+  margin-top: 10px;
+  border-radius: 6px;
+  top: 4px;
+  left: 4px;
+  background: url('images/scan-lines-repeated.png') repeat-x, linear-gradient(to bottom, rgba(254, 237, 163, 0.15) 0%, rgba(24, 24, 24, 0.15) 100%);
+  display: none;
+}
+
+.view-startgame.owner-false #game-mode-carousel {
+  display: none;
+}
+
+.view-startgame.owner-false .gamemode-title {
+  display: block;
+}
+
+.view-startgame.owner-true [data-show-carousel="true"] #game-mode-carousel {
+  display: block;
+}
+
+.view-startgame.owner-true [data-show-carousel="true"] .gamemode-title {
+  display: none;
+}
+
+.view-startgame.owner-true [data-show-carousel="false"] #game-mode-carousel, .view-startgame.owner-true [data-game-mode="coopVsAi"] #game-mode-carousel {
+  display: none;
+}
+
+.view-startgame.owner-true [data-show-carousel="false"] .gamemode-title, .view-startgame.owner-true [data-game-mode="coopVsAi"] .gamemode-title {
+  display: block;
+}
+
+.view-startgame #game-mode-carousel::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid #998f65;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.view-startgame #game-mode-carousel::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 2px solid rgba(127, 119, 82, 0.5);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.view-startgame #game-mode-carousel [class^="arrow"] {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  width: 42px;
+  border: 2px solid #cbbe83;
+  text-shadow: 0 0 20px black;
+  background-image: url('images/game-mode-arrow.png'), linear-gradient(to bottom, rgba(254, 237, 163, 0.26) 0%, rgba(252, 235, 162, 0.26) 1%, rgba(24, 24, 24, 0.26) 100%);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.view-startgame #game-mode-carousel .arrow-left {
+  left: 2px;
+}
+
+.view-startgame #game-mode-carousel .arrow-right {
+  right: 2px;
+  transform: scaleX(-1);
+}
+
+.view-startgame #game-mode-carousel .game-mode-information {
+  position: absolute;
+  top: 10px;
+  left: 54px;
+  right: 54px;
+  bottom: 10px;
+  text-align: center;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.view-startgame #game-mode-carousel .game-mode-title {
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1em;
+  white-space: nowrap;
+  max-width: 100%;
+  max-height: 1em;
+}
+
+.view-startgame #game-mode-carousel .game-time-title, .view-startgame #game-mode-carousel .game-time {
+  font-size: 0.6em;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+}
+
+.view-startgame .sub-gamemodes {
+  position: absolute;
+  top: 24px;
+  right: calc(100% + 40px);
+}
+
+.view-startgame.owner-false .sub-gamemodes {
+  display: none;
+}
+
+.view-startgame:not(.state-0):not(.state-1) .sub-gamemodes {
+  opacity: .4;
+  pointer-events: none;
+}
+
+.view-startgame .sub-modes-list {
+  position: relative;
+  background-color: #000;
+  padding: 15px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .3);
+}
+
+.view-startgame .sub-modes-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: -4px;
+  border-radius: 1px;
+  border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.view-startgame.owner-false .sub-modes-list {
+  opacity: .5;
+  pointer-events: none;
+}
+
+.view-startgame .sub-modes-list:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.view-startgame .sub-game-mode {
+  position: relative;
+  display: block;
+  width: 347px;
+  height: 108px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  transition: border-color 0.2s linear;
+  margin-bottom: 15px;
+}
+
+.view-startgame .sub-game-mode:last-child {
+  margin-bottom: 0;
+}
+
+.view-startgame .sub-game-mode.conquest3v3 {
+  background-image: url('images/conquest-game-mode.png');
+}
+
+.view-startgame .sub-game-mode.conquest {
+  background-image: url('images/conquest-game-mode.png');
+}
+
+.view-startgame .sub-game-mode.horde {
+  background-image: url('images/horde-game-mode.png');
+}
+
+.view-startgame .sub-game-mode.rift {
+  background-image: url('images/rift-game-mode.png');
+}
+
+.view-startgame .sub-game-mode.payload {
+  background-image: url('images/payload-game-mode.png');
+}
+
+.view-startgame .sub-game-mode.discovery {
+  background-image: url('images/discovery-game-mode.png');
+}
+
+.view-startgame .sub-game-mode.frontline {
+  background-image: url('images/frontline-game-mode.png');
+}
+
+.view-startgame .sub-game-mode.arkain {
+  background-image: url('images/arkain-game-mode.png');
+}
+
+.view-startgame .sub-game-mode.infection {
+  background-image: url('images/infection-game-mode.png');
+}
+
+.view-startgame .sub-game-mode.available-false {
+  opacity: .3;
+}
+
+.view-startgame .sub-game-mode.available-false span {
+  pointer-events: none;
+}
+
+.view-startgame .sub-game-mode.available-false .uicheckbox:hover, .view-startgame .sub-game-mode.available-false .uicheckbox:active {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .4);
+  background-image: none;
+}
+
+.view-startgame .sub-game-mode.available-false .uicheckbox:hover:before {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .7);
+}
+
+.view-startgame .sub-game-mode:not(.checked):not(.available-false):hover {
+  background-position: 0 -108px;
+}
+
+.view-startgame .sub-game-mode.checked, .view-startgame .sub-game-mode.checked:hover {
+  background-position: 0 -216px;
+}
+
+.view-startgame .sub-game-mode .uicheckbox {
+  display: none;
+}
+
+.view-startgame .sub-game-mode .sub-mode-name {
+  position: absolute;
+  bottom: 11px;
+  line-height: 28px;
+  font-size: 1.2em;
+  font-weight: normal;
+  text-transform: uppercase;
+  left: 13px;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
+}
+
+.view-startgame .sub-game-mode .sub-mode-description {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  font-size: 0.7em;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
+}
+
+.view-startgame .sub-game-mode .sub-mode-time {
+  position: absolute;
+  top: 5px;
+  bottom: 0;
+  right: 4px;
+  line-height: 1;
+  font-weight: normal;
+  font-size: .55em;
+  color: #bbb;
+  text-transform: uppercase;
+}
+
+.view-startgame .sub-game-mode .sub-mode-time-minutes {
+  text-transform: none;
+}
+
+.view-startgame .sub-game-mode .uicheckbox, .view-startgame .sub-game-mode .sub-mode-name, .view-startgame .sub-game-mode .sub-mode-time {
+  pointer-events: none;
+}
+
+.view-startgame .game-modes {
+  position: absolute;
+  top: 90px;
+  right: 100%;
+  width: 270px;
+  margin-right: 3px;
+  font-size: .8em;
+  z-index: 1005;
+  display: none;
+}
+
+.view-startgame .game-modes .game-mode {
+  position: relative;
+  height: 90px;
+  margin: 0 1px 30px 30px;
+  padding: 3px;
+  background: #000;
+  transition: margin 120ms ease-out;
+}
+
+.view-startgame .game-modes .game-mode.selected {
+  margin-right: -16px;
+  margin-left: 0;
+  padding: 0;
+  pointer-events: none;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 12px, rgba(0, 0, 0, 1) 12px);
+}
+
+.view-startgame:not(.state-0):not(.state-1) .game-modes .game-mode:not(.selected) {
+  pointer-events: none;
+}
+
+.view-startgame:not(.state-0):not(.state-1) .game-modes .game-mode:not(.selected):after {
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.view-startgame .game-modes .game-mode:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 1) 100%);
+}
+
+.view-startgame .game-modes .game-mode.selected:after {
+  background: none;
+}
+
+.view-startgame .game-modes .game-mode-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  pointer-events: none;
+  border-left: 1px solid #fff;
+}
+
+.view-startgame .game-modes .game-mode-frame-internal {
+  margin: 3px;
+}
+
+.view-startgame .game-modes .game-mode-frame-external {
+  opacity: .5;
+}
+
+.view-startgame .game-modes .game-mode-frame:before, .view-startgame .game-modes .game-mode-frame:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #fff;
+}
+
+.view-startgame .game-modes .game-mode-frame:before {
+  top: 0;
+}
+
+.view-startgame .game-modes .game-mode-frame:after {
+  bottom: 0;
+}
+
+.view-startgame .game-modes .game-mode.selected .game-mode-frame-internal {
+  margin: 0 13px 0 0;
+}
+
+.view-startgame .game-modes .game-mode.selected .game-mode-frame-external {
+  margin: -3px 15px -3px -3px;
+}
+
+.view-startgame .game-modes .game-mode:hover .game-mode-frame, .view-startgame .game-modes .game-mode:active .game-mode-frame, .view-startgame .game-modes .game-mode.selected .game-mode-frame {
+  border-color: #feeda3;
+}
+
+.view-startgame .game-modes .game-mode:hover .game-mode-frame:before, .view-startgame .game-modes .game-mode:active .game-mode-frame:before, .view-startgame .game-modes .game-mode.selected .game-mode-frame:before, .view-startgame .game-modes .game-mode:hover .game-mode-frame:after, .view-startgame .game-modes .game-mode:active .game-mode-frame:after, .view-startgame .game-modes .game-mode.selected .game-mode-frame:after {
+  background: linear-gradient(to right, #feeda3 50%, #ffffff 100%);
+}
+
+.view-startgame .game-modes .game-mode:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  margin: 3px;
+  pointer-events: none;
+  opacity: .9;
+  background-position: 0% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.view-startgame .game-modes .game-mode.selected:before {
+  margin: 1px;
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 1) 90px);
+}
+
+.view-startgame .game-modes .game-mode.provingGrounds:before {
+  background-image: url('images/bg-pg.png');
+}
+
+.view-startgame .game-modes .game-mode.conquest:before {
+  background-image: url('images/bg-conquest.png');
+}
+
+.view-startgame .game-modes .game-mode.frontline:before {
+  background-image: url('images/bg-frontline.png');
+}
+
+.view-startgame .game-modes .game-mode.fracturedSpace:before {
+  background-image: url('images/bg-fs.png');
+}
+
+.view-startgame .game-modes .game-mode.customMatch:before {
+  background-image: url('images/bg-custom.png');
+}
+
+.view-startgame .game-modes .game-mode.firingRange:before {
+  background-image: url('images/bg-firingrange.png');
+}
+
+.view-startgame .game-modes .game-mode-icon {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  z-index: 15;
+  width: 30px;
+  height: 30px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.view-startgame .game-modes .game-mode.selected .game-mode-icon {
+  top: 0;
+  left: 3px;
+}
+
+.view-startgame .game-modes .game-mode-name {
+  position: relative;
+  z-index: 10;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 33px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 1), 0 0 3px rgba(0, 0, 0, 1);
+  background: linear-gradient(to right, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0));
+}
+
+.view-startgame .game-modes .game-mode:hover .game-mode-name, .view-startgame .game-modes .game-mode:active .game-mode-name, .view-startgame .game-modes .game-mode.selected .game-mode-name {
+  color: #feeda3;
+}
+
+.view-startgame .game-modes .game-mode-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 0 6px 8px;
+  z-index: 10;
+  font-size: .9em;
+  font-weight: normal;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 1), 0 0 3px rgba(0, 0, 0, 1);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
+}
+
+.view-startgame .main:not([data-display-mode="ftue"]) .game-mode-ftue, .view-startgame .main:not([data-display-mode="firing-range"]) .game-mode-firing-range, .view-startgame .main:not([data-display-mode="matchmaking"]) .game-mode-matchmaking, .view-startgame .main:not([data-display-mode="servers"]) .game-mode-servers {
+  display: none;
+}
+
+.view-startgame .selected-mode-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.view-startgame .main[data-game-mode="coopVsAi"] .selected-mode-icon,
+.view-startgame .main[data-game-mode="arkain"] .selected-mode-icon,
+.view-startgame .main[data-game-mode="discovery"] .selected-mode-icon,
+.view-startgame .main[data-game-mode="conquest"] .selected-mode-icon,
+.view-startgame .main[data-game-mode="payload"] .selected-mode-icon,
+.view-startgame .main[data-game-mode="infection"] .selected-mode-icon {
+  background-image: url('images/quickplay-icon.png');
+}
+
+.view-startgame .main[data-game-mode="vip"] .selected-mode-icon, 
+.view-startgame .main[data-game-mode="vipCoop"] .selected-mode-icon {
+  background-image: url('images/vip-icon.png');
+}
+
+.view-startgame .main[data-game-mode="horde"] .selected-mode-icon {
+  background-image: url('images/last-stand-icon.png');
+}
+
+.view-startgame .main[data-game-mode="fracturedSpace"] .selected-mode-icon,
+.view-startgame .main[data-game-mode="customMatch"] .selected-mode-icon {
+  background-image: url('images/pvp-icon.png');
+}
+
+.view-startgame .selected-mode-title {
+  height: 30px;
+  line-height: 23px;
+  padding-left: 37px;
+  font-size: 1.6em;
+  font-weight: normal;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.view-startgame .selected-mode-time {
+  height: 30px;
+  line-height: 30px;
+  font-size: .7em;
+  font-weight: normal;
+  color: #ddd;
+}
+
+.view-startgame .selected-mode-time[data-time=""] {
+  visibility: hidden;
+}
+
+.view-startgame .selected-mode-description {
+  width: 100%;
+  font-size: .9em;
+  font-weight: normal;
+}
+
+.view-startgame .game-mode-ftue {
+  margin-top: 34px;
+}
+
+.game-mode-firing-range {}
+
+.firing-range-title {
+  margin-top: 30px;
+}
+
+.firing-range-steps {
+  padding: 9px 30px;
+  list-style-type: decimal;
+  font-size: 0.9em;
+  font-weight: normal;
+  color: rgba(85, 165, 195, 1);
+  border: 1px solid rgba(255, 255, 255, .3);
+  background: rgba(255, 255, 255, .05);
+}
+
+.firing-range-step {
+  margin: 5px 0;
+}
+
+.firing-range-step > span {
+  color: #fff;
+}
+
+.training-launch {
+  margin: 30px -30px 0 -30px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .1) 25%, rgba(255, 255, 255, .1) 75%, rgba(255, 255, 255, 0) 100%);
+}
+
+.training-early {
+  margin-top: 5px;
+  text-align: center;
+  font-size: .7em;
+  font-weight: normal;
+  color: #aaa;
+}
+
+.view-startgame .game-mode-servers {
+  position: absolute;
+  top: 90px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.view-startgame .average-wait-time {
+  display: none !important;
+}
+
+.view-startgame .number-of-players, .view-startgame .average-wait-time {
+  position: absolute;
+  top: 100%;
+  margin-top: 3px;
+  font-size: .7em;
+  opacity: .8;
+  display: none;
+}
+
+.view-startgame .number-of-players {
+  left: 0;
+}
+
+.view-startgame .average-wait-time {
+  right: 0;
+}
+
+.view-startgame .main[data-game-mode="fracturedSpace"] .number-of-players, .view-startgame .main[data-game-mode="fracturedSpace"] .average-wait-time {
+  display: block;
+}
+
+.view-startgame .game-mode-servers .buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.view-startgame .game-mode-servers .buttons .uibutton {
+  margin: 0 18px;
+}
+
+.view-startgame .game-mode-servers .buttons .button-servers-refresh {
+  min-width: 115px;
+}
+
+.view-startgame .game-mode-servers .buttons .button-servers-join {
+  float: right;
+  min-width: 205px;
+}
+
+.view-startgame .game-mode-servers .buttons .button-servers-spectator {
+  float: right;
+  margin-right: 30px;
+  visibility: hidden;
+}
+
+.view-startgame .servers-header {
+  height: 30px;
+  line-height: 30px;
+  margin: 0 1px 0 0px;
+  padding-left: 10px;
+  text-transform: uppercase;
+  display: -webkit-flex;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.view-startgame .servers-list {
+  position: absolute;
+  top: 29px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.view-startgame .server {
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  display: -webkit-flex;
+}
+
+.view-startgame .server:nth-child(2n) {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .075) 25%, rgba(255, 255, 255, .075) 75%, rgba(255, 255, 255, 0) 100%);
+}
+
+.view-startgame .server:hover {
+  background: linear-gradient(to right, rgba(85, 165, 195, 0) 0%, rgba(85, 165, 195, .15) 25%, rgba(85, 165, 195, .15) 75%, rgba(85, 165, 195, 0) 100%);
+}
+
+.view-startgame .server.highlight {
+  background: linear-gradient(to right, rgba(85, 165, 195, 0) 0%, rgba(85, 165, 195, .3) 25%, rgba(85, 165, 195, .3) 75%, rgba(85, 165, 195, 0) 100%);
+}
+
+.view-startgame .server.highlight {
+  color: #feeda3;
+}
+
+.view-startgame .server-mode {
+  width: 120px;
+  margin-right: 30px;
+  pointer-events: none;
+}
+
+.view-startgame .server-name {
+  -webkit-flex: 1;
+  pointer-events: none;
+}
+
+.view-startgame .server-players {
+  width: 120px;
+ /* margin-right: 150px;*/
+  text-align: center;
+  pointer-events: none;
+}
+
+.view-startgame .server-status {
+  width: 150px;
+  pointer-events: none;
+}
+
+.view-startgame .server.in-progress-true .server-status {
+  color: #feeda3;
+}
+
+.view-startgame .server .separator {
+  opacity: .7;
+}
+
+.view-startgame .server .server-mode {
+  font-size: .8em;
+  font-weight: normal;
+}
+
+.view-startgame .game-mode-matchmaking {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-right: 240px;
+}
+
+.view-startgame h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.view-startgame .play-wrapper {
+  position: relative;
+  height: 120px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.view-startgame:not(.state-0):not(.state-1) .waiting, .view-startgame.owner-false .waiting {
+  display: none;
+}
+
+.view-startgame.state-2 .not-owner, .view-startgame.state-3 .not-owner, .view-startgame.owner-true .not-owner {
+  display: none;
+}
+
+.view-startgame:not(.state-2) .in-progress {
+  display: none;
+}
+
+.view-startgame .waiting {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.view-startgame [data-game-mode="coopVsAi"] .waiting {
+  margin-top: 4em;
+}
+
+  .lobby-widget[data-game-mode="customMatch"] .pvp-searching {
+    display: none;
+  }
+
+  .lobby-widget:not([data-game-mode="customMatch"]) .custom-searching {
+    display: none;
+  }
+
+.view-startgame .waiting b {
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.view-startgame .in-progress {
+  padding-top: 18px;
+}
+
+.view-startgame .in-progress .lobby-widget {
+  margin: 5px auto 0 auto;
+}
+
+.view-startgame.owner-false .in-progress .lobby-widget .leave-queue {
+  display: none;
+}
+
+.view-startgame .not-owner {
+  height: 120px;
+  line-height: 120px;
+  font-size: 18px;
+}
+
+.view-startgame .play-now {
+  position: relative;
+  margin: 0 auto;
+  width: 21.8em;
+  height: 7em;
+  background: url('images/battle-button.png') no-repeat 0 0 / 21.8em 21em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-startgame .play-now:hover {
+	background-position: 0 -7em;
+}
+
+.view-startgame .play-now:active {
+	background-position: 0 -14em;
+}
+
+.view-startgame .play-now * {
+	pointer-events: none;
+}
+
+.view-startgame .play-now span {
+	font-size: 3.1em;
+	pointer-events: none;
+	position:relative;
+	z-index:10;
+	font-weight: 600;
+	color: #121921;
+	line-height: 1;
+	text-shadow: 0 0 10px rgba(14, 14, 14, 0.2);
+	max-width: calc(100% - 2em);
+	text-align: center;
+	white-space: nowrap;
+}
+
+.view-startgame .recreate-wrapper .play-now span {
+    font-size: 1.9em;
+    text-transform: uppercase;
+}
+
+.view-startgame [data-game-mode="customMatch"] .play-now {
+  margin-top: 0.25em;
+}
+
+.view-startgame .game-mode-servers .server-options {
+  position: absolute;
+  bottom: 100%;
+  right: 17px;
+  margin-bottom: 18px;
+}
+
+.view-startgame .game-mode-matchmaking .server-options {
+  position: relative;
+  font-weight: normal;
+  margin-top: 1em;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.view-startgame .game-mode-matchmaking .server-options * {
+  pointer-events: none;
+}
+
+.view-startgame .game-mode-matchmaking .server-options .button-content {
+  position: relative;
+  z-index: 5;
+  display: inline-block;
+  font-size: 1.5em;
+  line-height: 1.8em;
+  padding: 0 1em;
+  background: rgba(56, 56, 56, 1);
+  border: 0.1em solid #ff9f44;
+  text-transform: uppercase;
+  transition: transform 75ms linear;
+}
+
+.view-startgame .game-mode-matchmaking .server-options .button-content:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  background: rgba(255, 159, 68, 0.3);
+  transition: right ease-out 240ms;
+  z-index: -1;
+}
+
+.view-startgame .game-mode-matchmaking .server-options:hover .button-content:before {
+  right: 0;
+}
+
+.view-startgame .game-mode-matchmaking .server-options:active .button-content {
+  transform: scale(0.8);
+}
+
+.view-startgame .quickplay-info,
+.view-startgame .drag-players {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 2px;
+  font-size: .7em;
+  opacity: 0.7;
+}
+
+.view-startgame.owner-false .quickplay-info,
+.view-startgame.owner-false .drag-players {
+  display: none;
+}
+
+.view-startgame .team {
+  position: relative;
+}
+
+.view-startgame .teams-header {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  line-height: 30px;
+}
+
+.view-startgame .teams-header .team-header {
+  min-width: 0;
+  flex: 1;
+  padding-left: 6px;
+  font-weight: normal;
+}
+
+.view-startgame .teams-header .team-name {}
+
+.view-startgame .teams-header .team-mmr {
+  font-size: .7em;
+  margin-left: 15px;
+}
+
+.view-startgame .teams-header .team-mmr-value {
+  color: #78c670;
+}
+
+.view-startgame .teams, .view-startgame .spectators {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.view-startgame .team ul {
+  min-width: 0;
+  flex: 1;
+}
+
+.view-startgame .team ul:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
+.view-startgame .team ul:first-child:last-child {
+  border-right-width: 0;
+}
+
+.view-startgame .team li {
+  position: relative;
+  height: 45px;
+  padding: 0 42px 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: normal;
+  transform-origin: 0% 50%;
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0) inset;
+  background: linear-gradient(to right, rgba(85, 165, 195, 0), rgba(85, 165, 195, .1), rgba(85, 165, 195, 0));
+}
+
+.view-startgame #team-spectator {
+  width: 100%;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.view-startgame.owner-true.multiple-teams .lobby-team:last-child li {
+  transform-origin: 100% 50%;
+}
+
+.view-startgame.owner-true.multiple-teams .lobby-team li:not(.free):before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 45px;
+  bottom: 0;
+  z-index: -1;
+  background: transparent url('images/drag-player.png') 100% 50% no-repeat;
+  background-size: auto 80%;
+  opacity: 0;
+  transform: translateX(-5%);
+  transition: opacity 120ms ease-in-out, transform 120ms ease-in-out;
+}
+
+.view-startgame.owner-true.multiple-teams .lobby-team:last-child li:not(.free):before {
+  background-position-x: 0%;
+  right: 30px;
+  transform: translateX(5%) scale(-1, 1);
+}
+
+.view-startgame.owner-true.multiple-teams .lobby-team li:hover:before, .view-startgame.owner-true.multiple-teams .lobby-team li.dragging:before, .view-startgame.owner-true.multiple-teams .lobby-team li.drop-target:before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.view-startgame.owner-true.multiple-teams .lobby-team:last-child li:hover:before, .view-startgame.owner-true.multiple-teams .lobby-team:last-child li.dragging:before, .view-startgame.owner-true.multiple-teams .lobby-team:last-child li.drop-target:before {
+  transform: translateX(0) scale(-1, 1);
+}
+
+.view-startgame .team li .drag-handle, .view-startgame .team li .drop-handle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+}
+
+.view-startgame .team li .drag-handle {
+  margin-right: 45px;
+}
+
+.view-startgame.owner-true .team li .drag-handle, .view-startgame.during-dragging .team li .drop-handle {
+  display: block;
+}
+
+.view-startgame .team li.free {
+  color: #fff;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.view-startgame .team li.owner {
+  color: #fff;
+  background: linear-gradient(to right, rgba(254, 237, 163, 0), rgba(254, 237, 163, .2), rgba(254, 237, 163, 0));
+}
+
+.view-startgame .team li.dragging {
+  pointer-events: none;
+  z-index: 20;
+  background-color: #000;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .7) inset, 0 0 5px 1px rgba(0, 0, 0, .7);
+  transition: box-shadow 200ms ease-out;
+}
+
+.view-startgame .team li.dragging .separator {
+  display: none;
+}
+
+.view-startgame .team li.drop-target {
+  z-index: 10;
+  opacity: 1;
+  background-color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .7) inset;
+}
+
+.view-startgame .team li.free.drop-target {
+  color: #777;
+}
+
+.view-startgame .team li.drop-target .separator {
+  display: none;
+}
+
+.view-startgame .team:not([data-players="1"]) li.owner:after {
+  content: attr(data-host-text);
+  position: absolute;
+  top: 0;
+  right: 4px;
+  line-height: 60px;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: .7em;
+  color: #feeda3;
+}
+
+.view-startgame .team .free {
+  background: none;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 200;
+  text-transform: uppercase;
+  opacity: .3;
+}
+
+.view-startgame .team .spectator .free {
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+.view-startgame .team li .separator {
+  opacity: .5;
+}
+
+.view-startgame .team li:last-child .separator {
+  display: none;
+}
+
+.view-startgame .team li .image {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  width: 38px;
+  height: 38px;
+  margin-top: -19px;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent url('images/user.png') 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.view-startgame .team li .name {
+  font-size: .8em;
+  height: 18px;
+  line-height: 18px;
+  width: 100%;
+  margin-bottom: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: rgba(85, 165, 195, 1);
+}
+
+.view-startgame .team li.owner .name {
+  color: #fff;
+}
+
+.view-startgame .team li .rank, .view-startgame .team li .spectator {
+  height: 18px;
+  line-height: 18px;
+  font-size: 0.55em;
+  pointer-events: none;
+}
+
+.view-startgame #team-spectator li .rank {
+  display: none;
+}
+
+.view-startgame .team li .rank .mmr {
+  color: #78c670;
+}
+
+.view-startgame .team li .kick {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  opacity: .7;
+  background: transparent url('images/kick.png') 50% 50% no-repeat;
+  background-size: 40%;
+}
+
+.view-startgame .team li .kick:hover {
+  opacity: 1;
+}
+
+.view-startgame .team li .kick:active {
+  opacity: .8;
+}
+
+.view-startgame .team li.owner .kick, .view-startgame.owner-false .team li .kick {
+  display: none;
+}
+
+.view-startgame .friends {
+  position: absolute;
+  top: -90px;
+  right: -30px;
+  bottom: 0;
+  width: 240px;
+  border-left: 1px solid rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.view-startgame:not(.state-0):not(.state-1) .friends {
+  opacity: .4;
+  pointer-events: none;
+}
+
+.view-startgame .friends-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px 10px 0 10px;
+  margin-right: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.view-startgame .friends-list .search {
+  display: flex;
+}
+
+.view-startgame .friends-list .search input {
+  float: left;
+  width: 100%;
+  height: 100%;
+  padding: 0 2px 0 24px;
+  font-size: 1em;
+  font-weight: inherit;
+  border: none;
+  border: 1px solid rgba(255, 255, 255, .4);
+  background: rgba(255, 255, 255, .1) url('../../images/mag-glass.png') 2px 2px no-repeat;
+  margin-bottom: 15px;
+}
+
+.view-startgame .friends > .separator {
+  opacity: .2;
+}
+
+.view-startgame .friends h2 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.view-startgame .friends h2.smaller {
+  font-size: 1em;
+}
+
+.view-startgame .friends ul {
+  margin-bottom: 30px;
+}
+
+.view-startgame .friends ul li {
+  position: relative;
+  display: flex;
+  min-height: 30px;
+  line-height: 1;
+  padding: 0 30px 0 34px;
+  margin-bottom: 15px;
+  font-weight: normal;
+  font-size: .8em;
+  background: linear-gradient(to right, rgba(85, 165, 195, 0), rgba(85, 165, 195, .1), rgba(85, 165, 195, 0));
+}
+
+.view-startgame .friends ul li.invited {
+  pointer-events: none;
+}
+
+.view-startgame .friends ul li.invited, .view-startgame .friends ul li.inlobby {
+  color: #aaa;
+  padding-right: 39px;
+}
+
+.view-startgame .friends ul li:not(.invited):hover, .view-startgame .friends ul li:not(.inlobby):hover {
+  background: linear-gradient(to right, rgba(85, 165, 195, 0), rgba(85, 165, 195, .2), rgba(85, 165, 195, 0));
+}
+
+.view-startgame .friends ul li:last-child {
+  margin-bottom: 0;
+}
+
+.view-startgame .friends ul li .image {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(85, 165, 195, 0.8);
+  background: transparent url('images/user.png') 50% 50% no-repeat;
+  background-size: 26px;
+}
+
+.view-startgame .friends ul li.invited .image, .view-startgame .friends ul li.inlobby .image {
+  border-color: rgba(128, 128, 128, .8);
+}
+
+.view-startgame .friends ul li .invite {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  text-align: right;
+  opacity: .7;
+  background: transparent url('images/invite.png') 50% 50% no-repeat;
+}
+
+.view-startgame .friends ul li .invite:hover {
+  opacity: 1;
+}
+
+.view-startgame .friends ul li .invite:active {
+  opacity: .8;
+}
+
+.view-startgame .friends ul li.invited:not(.inlobby) .invite {
+  opacity: 1;
+  background-image: none;
+  width: auto;
+}
+
+.view-startgame .friends ul li.invited:not(.inlobby) .invite:after {
+  content: 'Invited';
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+.view-startgame .friends ul li.inlobby .invite {
+  background-image: url('images/inlobby.png');
+  pointer-events: all;
+}
+
+.view-startgame .friends ul li .name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.view-startgame .loading-game {
+  position: absolute;
+  top: 210px;
+  bottom: 210px;
+  left: 0;
+  right: 240px;
+}
+
+.view-startgame .loading-game.ready {
+  display: block;
+}
+
+.view-startgame[data-players-count="1"] .loading-game {
+  margin-top: 0;
+}
+
+.view-startgame[data-players-count="2"] .loading-game {
+  margin-top: 60px;
+}
+
+.view-startgame[data-players-count="3"] .loading-game {
+  margin-top: 120px;
+}
+
+.view-startgame[data-players-count="4"] .loading-game {
+  margin-top: 180px;
+}
+
+.view-startgame[data-players-count="5"] .loading-game {
+  margin-top: 240px;
+}
+
+.view-startgame .loading-game:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 50;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 1) inset;
+}
+
+.view-startgame .loading-game.play-intro:before {
+  display: none;
+}
+
+.view-startgame .loading-game .game-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-position: top right;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+.view-startgame .loading-game.play-intro .game-overlay.intro {
+  top: 50%;
+  right: auto;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 60;
+}
+
+.view-startgame .loading-game.play-intro canvas, .view-startgame .loading-game.play-intro .hud, .view-startgame .loading-game.ready .hud {
+  visibility: hidden;
+}
+
+.view-startgame .loading-game .game-overlay.menu {
+  z-index: 25;
+  background-image: url('images/game/menu.png');
+}
+
+.view-startgame .loading-game.ready .game-overlay.menu, .view-startgame .loading-game.death-screen .game-overlay.menu, .view-startgame .loading-game.play-intro .game-overlay.intro {
+  display: block;
+}
+
+.view-startgame .loading-game .play-loading-game {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+  margin: 0 0 -11px 90px;
+  padding: 0 10px;
+  z-index: 30;
+  display: none;
+}
+
+.view-startgame .loading-game.ready .play-loading-game {
+  display: block;
+}
+
+.view-startgame .chat {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 240px;
+  height: 28%;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .2);
+}
+
+.view-startgame .chat .input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  padding-left: 5px;
+  display: -webkit-flex;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .1) 25%, rgba(255, 255, 255, .1) 75%, rgba(255, 255, 255, 0) 100%);
+}
+
+.view-startgame .chat .input .chat-name {
+  position: relative;
+  padding-right: 5px;
+  line-height: 30px;
+  font-size: 0.7em;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.view-startgame .chat .input .chat-name:after {
+  content: ':';
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.view-startgame .chat .input input {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: transparent;
+  border: none;
+  flex: 1;
+}
+
+.view-startgame .chat ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  padding: 7px;
+  font-size: .85em;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.view-startgame .chat ul li {
+  line-height: 1.2;
+}
+
+.view-startgame .chat ul li.type-1 {
+  color: #feeda3;
+}
+
+.view-startgame .chat ul li span {}
+
+.view-startgame .chat ul li .time {
+  opacity: .8;
+  font-size: .7em;
+  font-weight: normal;
+}
+
+.view-startgame .chat ul li.type-1 .time {
+  color: #cbbd75;
+}
+
+.view-startgame .chat ul li .player {
+  font-weight: normal;
+  margin-right: 3px;
+}
+
+.view-startgame .chat ul li.type-1 .player {
+  display: none;
+}
+
+.view-startgame .active-missions {
+  position: absolute;
+  top: 60px;
+  left: 95%;
+  width: 242px;
+  padding-left: 14px;
+  padding-right: 4px;
+  opacity: 0;
+  max-height: calc(100% - 60px);
+  transition: opacity 250ms ease-in-out, left 500ms ease-in-out, padding 500ms ease-in-out;
+}
+
+.view-startgame .active-missions.show-missions {
+  opacity: 1;
+  left: 100%;
+  transition: opacity 500ms ease-in-out, left 250ms ease-in-out, padding 250ms ease-in-out;
+  display: none;
+}
+
+body:not([data-ftue="1"]):not([data-ftue="2"]) .view-startgame .active-missions.show-missions {
+  display: block;
+}
+
+.view-startgame .missions-title {
+  position: relative;
+  height: 20px;
+  line-height: 20px;
+  padding-left: 5px;
+  margin-left: 4px;
+  border-left: 2px solid #595959;
+}
+
+.view-startgame .missions-title:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 6px;
+  margin-left: -10px;
+  background: #595959;
+}
+
+.view-startgame .missions-list {
+  position: relative;
+  margin-top: 8px;
+}
+
+.view-startgame .player-mission {
+  height: 220px;
+  padding: 3px 5px;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .3);
+  background: rgba(0, 0, 0, .5);
+}
+
+.view-startgame .player-mission:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: -4px;
+  border-radius: 1px;
+  border: 1px solid rgba(255, 255, 255, .5);
+}
+
+.view-startgame .player-mission .mission-name {
+  background: none;
+}
+
+.player-mission .mission-progress, .player-mission .mission-rewards {
+  margin-bottom: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.view-startgame .uiminimize {
+  position: absolute;
+  top: -12px;
+  right: 50px;
+  width: 72px;
+  height: 54px;
+  opacity: .7;
+  background: transparent url('../../images/header/button-minimize.png') 0 0 no-repeat;
+}
+
+.view-startgame .uiminimize:hover {
+  background-image: url('../../images/header/button-minimize-over.png');
+}
+
+.view-startgame .campaign-list{
+  text-transform: uppercase;
+}
+
+.view-startgame .campaign-list .campaign-tile.completed .countdown-wrapper{
+  top: 3em;
+  transform: translate(-11.5em, 0.5em) rotate(-32deg);
+}
+
+.view-startgame .uiminimize:active {
+  background-image: url('../../images/header/button-minimize-active.png');
+}
+@media all and (max-width: 1440px) {
+  .view-startgame .main {
+    width: 700px;
+  }
+}
+@media all and (max-width: 1366px) {
+  .view-startgame .main {
+    width: 620px;
+  }
+}
+@media all and (max-width: 1280px) {
+  .view-startgame .main {
+    width: 655px;
+  }
+  .view-startgame .active-missions.campaign-widget.campaign-info {
+      font-size: 0.55em;
+  }
+}
+@media all and (max-height: 800px) {
+  .view-startgame .main {
+    height: 640px;
+  }
+  
+  .view-startgame .sub-gamemodes {
+    transform: scale(0.6);
+    transform-origin: 100% 0;
+    font-size: 1.3em;
+  }
+  .view-startgame .sub-gamemodes .sub-mode-description {
+    font-size: 1em;
+  }
+  .view-startgame .sub-gamemodes .sub-mode-name {
+    font-size: 0.7em;
+  }
+  .view-startgame .active-missions {
+    width: 232px;
+    top: 0;
+    max-height: 100%;
+  }
+}
+
+@media all and (min-height: 801px) and (max-height: 1024px) and (max-width: 1300px) {
+  .view-startgame .main {
+    height: 640px;
+    width: 655px;
+    font-size: 0.8em;
+  }
+  .view-startgame .active-missions.campaign-widget.campaign-info {
+      font-size: 0.55em;
+  }
+  .view-startgame .active-missions {
+    width: 232px;
+  }
+  .view-startgame .play-wrapper {
+    margin: 15px 0;
+  }
+  .view-startgame .sub-game-mode .sub-mode-description, .view-startgame .sub-game-mode .sub-mode-name {
+    font-size: 20px;
+  }
+  .view-startgame .sub-gamemodes {
+    transform: scale(0.6);
+    transform-origin: 100% 0;
+    font-size: 1.8em;
+  }
+  .view-startgame .sub-gamemodes {
+    transform-origin: 100% 0;
+    transform: scale(0.7);
+  }
+  .view-startgame .chat {
+    height: 20% !important;
+  }
+}
+
+@media all and (width: 1440px) and (height: 900px) {
+  .view-startgame .sub-gamemodes {
+    transform: scale(0.8);
+    transform-origin: 100%;
+  }
+}
+
+@media all and (max-width: 1440px) {
+  .view-startgame .chat {
+    height: 25% !important;
+  }
+  .view-startgame [data-game-mode="customMatch"] .team li {
+    height: 40px;
+  }
+  .view-startgame .main[data-game-mode="customMatch"] .waiting, .view-startgame .main[data-game-mode="customMatch"] .in-progress {
+    margin-top: 0;
+  }
+  .view-startgame .play-wrapper {
+    margin-top: 1em;
+  }
+  .view-startgame .player-mission {
+    height: 212px;
+  }
+}
+
+.hide-mmr .view-startgame .team-mmr-value, .hide-mmr .view-startgame .team-mmr, .hide-mmr .view-startgame .mmr-wrapper {
+  display: none;
+}
+
+.view-startgame .hidden {
+  display: none;
+}
+
+.view-startgame .main:not([data-game-mode="customMatch"]) .bot-selection {
+  display: none;
+}
+
+/*Options*/
+.bot-selection {
+  z-index: 100;
+}
+.bot-selection .options-list {
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .4);
+  }
+  .bot-selection .options-list.open {
+    z-index: 15;
+  }
+    .bot-selection .options-list:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 210px;
+      width: 1px;
+      z-index: 3;
+      background: rgba(255, 255, 255, .5);
+    }
+    .bot-selection .options-list > li {
+      position: relative;
+      min-height: 30px;
+      line-height: 30px;
+      padding-left: 8px;
+      z-index: 2;
+    }
+    .bot-selection .options-list > li[data-multi-res-enabled="false"] {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+    .bot-selection .options-list > li:nth-child(2n + 1) {
+      background: rgba(255, 255, 255, .05);
+    }
+    .bot-selection .options-list > li:hover,
+    .bot-selection .options-list > li.open {
+      color: #e8d895;
+      z-index: 1;
+      background: linear-gradient(to right, rgba(16, 66, 82, 0) 0%,
+                                            rgba(16, 66, 82, .25) 33%,
+                                            rgba(16, 66, 82, .25) 66%,
+                                            rgba(16, 66, 82, 0) 100%);
+    }
+    .bot-selection .options-list > li.open {
+      z-index: 10;
+    }
+    .bot-selection .options-list > li:not(:first-child):before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -1px;
+      height: 1px;
+      z-index: 2;
+      pointer-events: none;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%,
+                                            rgba(255, 255, 255, .25) 33%,
+                                            rgba(255, 255, 255, .25) 66%,
+                                            rgba(255, 255, 255, 0) 100%);
+
+    }
+    .bot-selection .options-list > li label {
+      font-size: .9em;
+      width: calc(100% - 210px);
+      display: inline-block;
+    }
+    .bot-selection .options-list .option {
+      position: relative;
+      float: right;
+      height: 100%;
+      margin-top: -1px;
+    }
+    .bot-selection .options-list .option.key-binder:hover {
+      background: rgba(255, 255, 255, .15);
+      opacity: 1;
+    }
+    .bot-selection .options-list .option.range {
+      top: 0;
+      bottom: auto;
+    }
+
+.bot-selection .options-list .toggler {
+  position: relative;
+  line-height: 30px;
+  width: 210px;
+  font-size: 0.9em;
+  text-align: center;
+  overflow: hidden;
+  z-index: 200;
+}
+.bot-selection .options-list .toggler.open {
+  overflow: visible;
+}
+  .bot-selection .options-list .toggler .values {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background: #000;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 1);
+    border: 1px solid rgba(255, 255, 255, .8);
+    display: none;
+  }
+    .bot-selection .options-list .toggler .values:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: -3px;
+      pointer-events: none;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, .3);
+    }
+    .bot-selection .options-list .toggler .values div {
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, .3);
+    }
+    .bot-selection .options-list .toggler .values div:hover,
+    .bot-selection .options-list .toggler .values .selected {
+      color: #e8d895;
+      background: linear-gradient(to right, rgba(16, 66, 82, 0) 0%,
+                                            rgba(16, 66, 82, .4) 33%,
+                                            rgba(16, 66, 82, .4) 66%,
+                                            rgba(16, 66, 82, 0) 100%);
+    }
+  .bot-selection .options-list .toggler.open .values {
+    display: block;
+  }
+  .bot-selection .options-list .toggler .value {
+    position: relative;
+    z-index: 1;
+  }
+  .bot-selection .options-list .toggler .uipaging {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 26px;
+    height: auto;
+    opacity: .5;
+    z-index: 2;
+  }
+  .bot-selection .options-list .toggler .uipaging:hover {
+    opacity: 1;
+  }
+  .bot-selection .options-list .toggler .uipaging.prev {
+    left: 0;
+  }
+  .bot-selection .options-list .toggler .uipaging.next {
+    right: 0;
+  }
+
+.team.botOptions-1 .lobby-team li.free,
+.team.botOptions-4 .lobby-team li.free,
+.team.botOptions-7 .lobby-team li.free,
+.team.botOptions-9 .lobby-team li.free {
+  font-size: 1em;
+}
+.team.botOptions-9 .lobby-team li.free {
+  font-size: 0.9em;
+}
+
+.main .bot-selection,
+.main #bot-captain-title,
+.main #bot-captain-list {
+  display: none;
+}
+
+.main[data-game-mode="customMatch"] .bot-selection,
+.main[data-game-mode="customMatch"] #bot-captain-title,
+.main[data-game-mode="customMatch"] #bot-captain-list {
+  display: block;
+}
+
+.view-startgame.owner-false .main[data-game-mode="customMatch"] .bot-selection,
+.view-startgame.owner-false .main[data-game-mode="customMatch"] #bot-captain-title,
+.view-startgame.owner-false .main[data-game-mode="customMatch"] #bot-captain-list {
+  display: none;
+}
+
+.main[data-game-mode="customMatch"] .bot-selection.minimized,
+.main[data-game-mode="customMatch"] #bot-captain-list.minimized {
+  display: none;
+}
+
+#bot-captain-title:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    right: 0;
+    background-image: url('../../images/paging-over.png');
+    width: 34px;
+    height: 34px;
+    transform: rotate(270deg) scale(0.5);
+}
+
+#bot-captain-title.minimized:after {
+  transform: rotate(360deg) scale(0.5);
+}
+
+.bot-selection li {
+    display: flex;
+    flex-direction: column;
+}
+
+.bot-selection ul.options-list {
+    margin-bottom: 0.5em;
+}
+
+.bot-selection .options-list li {
+    padding: 0.3em !important;
+}
+
+.bot-selection .options-list > li label {
+    font-size: auto;
+    width: 100%;
+    display: inline-block;
+
+    text-align: center;
+    color: #EEE;
+    line-height: 1.2;
+}
+
+.bot-selection .option.toggler {
+    width: 100%;
+    height: 2.2em;
+}
+
+.lobby-reachable-false #game-mode-carousel,
+.no-connection #game-mode-carousel {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.lobby-reachable-false .friends,
+.no-connection .friends {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.lobby-reachable-false .sub-gamemodes,
+.no-connection .sub-gamemodes {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.no-connection .play-wrapper {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.lobby-reachable-false .chat,
+.no-connection .chat {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.lobby-reachable-false .team,
+.no-connection .team * {
+  pointer-events: none;
+}
+
+.lobby-reachable-false .team:before,
+.no-connection .team:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 10;
+}
+
+.no-connection .team:after {
+  content: 'Lost connection to Steam.\APlease wait whilst we attempt to reconnect you.';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2em;
+  text-align: center;
+  z-index: 20;
+  white-space: pre;
+  background: rgba(0,0,0,0.5);
+}
+
+.lobby-reachable-false b.uiclose,
+.no-connection b.uiclose {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.recreate-wrapper {
+  display: none;
+  pointer-events: none;
+  font-size: 10px;
+}
+
+.lobby-reachable-false:not(.no-connection) .play-wrapper {
+  display: none;
+  pointer-events: none;
+}
+
+.lobby-reachable-false .recreate-wrapper .waiting,
+.lobby-reachable-false .recreate-wrapper .play-now,
+.lobby-reachable-false .recreate-wrapper {
+  display: block;
+  pointer-events: all;
+}
+.no-connection .recreate-wrapper {
+  display: none;
+}
+.lobby-reachable-false .recreate-wrapper .not-owner {
+  display: block;
+  height: inherit;
+  line-height: inherit;
+  text-align: center;
+}
+
+@media all and (max-width: 3840px) {
+  .view-startgame .play-wrapper {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 2560px) {
+  .view-startgame .play-wrapper {
+    font-size: 13.33px;
+  }
+}
+
+@media all and (max-width: 1920px) {
+  .view-startgame .play-wrapper {
+    font-size: 10px;
+  }
+}
+
+@media all and (max-width: 1680px) {
+  .view-startgame .play-wrapper {
+    font-size: 8.75px;
+  }
+}
+
+@media all and (max-width: 1600px) {
+  .view-startgame .play-wrapper {
+    font-size: 8.33px;
+  }
+}
+
+@media all and (max-width: 1440px) {
+  .view-startgame .play-wrapper {
+    font-size: 7.5px;
+  }
+}
+
+@media all and (max-width: 1366px) {
+  .view-startgame .play-wrapper {
+    font-size: 7.11px;
+  }
+}
+
+@media all and (max-width: 1360px) {
+  .view-startgame .play-wrapper {
+    font-size: 7.08px;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .view-startgame .play-wrapper {
+    font-size: 6.66px;
+  }
+}
