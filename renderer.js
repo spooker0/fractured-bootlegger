@@ -5,7 +5,6 @@ const fs = require('fs');
 const registry = require('winreg');
 const vdf = require("vdf");
 
-
 const dataMapping = [
     {
         src: "Fractured Space.exe",

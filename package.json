@@ -2,17 +2,22 @@
     "name": "fractured-bootlegger",
     "version": "1.0.0",
     "description": "Bootlegged Installer for Fractured Space",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rukqoa/fractured-bootlegger.git"
+    },
     "main": "main.js",
     "scripts": {
         "start": "electron .",
         "pack": "electron-builder --dir",
-        "dist": "electron-builder"
+        "publish": "build -p always"
     },
     "devDependencies": {
         "electron": "^5.0.7"
     },
     "dependencies": {
         "electron-builder": "^21.1.1",
+        "electron-updater": "^4.1.2",
         "regedit": "^3.0.2",
         "vdf": "0.0.2",
         "winreg": "^1.2.4"
