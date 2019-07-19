@@ -1,8 +1,8 @@
-version: 1.0.1
+version: 1.0.4
 files:
-  - url: fractured-bootlegger-Setup-1.0.1.exe
-    sha512: H453v/g/DJAQzotl7h1fYeoeYm1lUZQ//JS4ESFo59b3GxKgNh2iSswo+T5nPqXZSrNEERCR1N3n4M+3/7R1gQ==
-    size: 57110657
-path: fractured-bootlegger-Setup-1.0.1.exe
-sha512: H453v/g/DJAQzotl7h1fYeoeYm1lUZQ//JS4ESFo59b3GxKgNh2iSswo+T5nPqXZSrNEERCR1N3n4M+3/7R1gQ==
-releaseDate: '2019-07-19T08:23:09.781Z'
+  - url: fractured-bootlegger-Setup-1.0.4.exe
+    sha512: JMJvx6Fr3g/kP0z2Shw5wsju7vzEGVhsYuEmtYX90j9byJcIx2X8nhr8Js569nqwqQZ4RZZllEdhsvIsopH1ew==
+    size: 57754423
+path: fractured-bootlegger-Setup-1.0.4.exe
+sha512: JMJvx6Fr3g/kP0z2Shw5wsju7vzEGVhsYuEmtYX90j9byJcIx2X8nhr8Js569nqwqQZ4RZZllEdhsvIsopH1ew==
+releaseDate: '2019-07-19T09:37:27.882Z'

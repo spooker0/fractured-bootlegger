@@ -36,7 +36,7 @@ document.getElementById("pick-directory").addEventListener("click", () => {
 
 function replaceFiles(directory) {
     dataMapping.forEach((v) => {
-        fs.copyFileSync("data/" + v.src, directory + "/" + v.dest);
+        fs.copyFileSync("resources/data/" + v.src, directory + "/" + v.dest);
     });
 }
 

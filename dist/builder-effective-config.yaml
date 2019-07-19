@@ -1,8 +1,12 @@
 directories:
   output: dist
   buildResources: build
-appId: com.fracturedspace.installer
+appId: com.fractured.bootlegger
 extraResources:
   - filter:
       - ./data/**
+nsis:
+  oneClick: false
+  perMachine: true
+  allowToChangeInstallationDirectory: true
 electronVersion: 5.0.7

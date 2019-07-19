@@ -1,6 +1,6 @@
 {
     "name": "fractured-bootlegger",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "description": "Bootlegged Installer for Fractured Space",
     "author": "rukqoa",
     "repository": {
@@ -10,23 +10,28 @@
     "main": "main.js",
     "scripts": {
         "start": "electron .",
-        "pack": "electron-builder --dir",
-        "release": "build --win -p always"
+        "pack": "electron-builder --dir"
     },
     "devDependencies": {
         "electron": "^5.0.7",
-        "electron-builder": "^21.1.1"
+        "electron-builder": "20.38.5"
     },
     "dependencies": {
+        "build": "^0.1.4",
         "electron-updater": "^4.1.2",
         "regedit": "^3.0.2",
         "vdf": "0.0.2",
         "winreg": "^1.2.4"
     },
     "build": {
-        "appId": "com.fracturedspace.installer",
+        "appId": "com.fractured.bootlegger",
         "extraResources": [
             "./data/**"
-        ]
+        ],
+        "nsis": {
+            "oneClick": false,
+            "perMachine": true,
+            "allowToChangeInstallationDirectory": true
+        }
     }
 }
