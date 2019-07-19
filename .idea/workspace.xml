@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02131b25-1af4-4d29-88fe-777a3dd6c0ee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/electron-builder.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/builder-effective-config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dist/builder-effective-config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fractured-bootlegger Setup 1.0.1.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/fractured-bootlegger Setup 1.0.1.exe.blockmap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/latest.yml" beforeDir="false" afterPath="$PROJECT_DIR$/dist/latest.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/win-unpacked/fractured-bootlegger.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/win-unpacked/fractured-bootlegger.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/win-unpacked/resources/app.asar" beforeDir="false" afterPath="$PROJECT_DIR$/dist/win-unpacked/resources/app.asar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/renderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/renderer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="803">
-              <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+            <state relative-caret-position="837">
+              <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -176,12 +164,12 @@
       <workItem from="1563420321458" duration="2956000" />
       <workItem from="1563424832698" duration="1060000" />
       <workItem from="1563510937427" duration="5361000" />
-      <workItem from="1563521077005" duration="8062000" />
+      <workItem from="1563521077005" duration="8108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17439000" />
+    <option name="totallyTimeSpent" value="17485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -259,8 +247,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+        <state relative-caret-position="837">
+          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
         </state>
       </provider>
     </entry>
