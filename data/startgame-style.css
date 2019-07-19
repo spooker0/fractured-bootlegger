@@ -754,6 +754,7 @@
 .view-startgame .server-name {
   -webkit-flex: 1;
   pointer-events: none;
+  font-size: 0.7em;
 }
 
 .view-startgame .server-players {
