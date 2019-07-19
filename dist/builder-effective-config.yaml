@@ -1,0 +1,8 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.fracturedspace.installer
+extraResources:
+  - filter:
+      - ./data/**
+electronVersion: 5.0.7
