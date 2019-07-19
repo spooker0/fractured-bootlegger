@@ -28,9 +28,12 @@ const dataMapping = [
     }
 ];
 
-document.getElementById("pick-directory").addEventListener("click", () => {
+let button = document.getElementById("pick-directory");
+button.addEventListener("click", (el) => {
     findSteamFolder((folder) => {
         replaceFiles(folder.replace(/\\\\/g, "/"));
+        button.textContent = "Installed files";
+        button.classList.add("disabled");
     });
 });
 
@@ -62,7 +65,7 @@ function findSteamFolder(callback) {
         let vdfResult = vdf.parse(libraryFolders);
         let steamOtherFolders = [];
         for (let i = 1; true; i++) {
-            var steamFolder = vdfResult.LibraryFolders[i];
+            let steamFolder = vdfResult.LibraryFolders[i];
             if (steamFolder) {
                 steamOtherFolders.push(steamFolder + "/steamapps");
             } else {
@@ -81,15 +84,23 @@ function findSteamFolder(callback) {
 
 
 function matchAppManifest(steamappsPath, callback) {
-    var appManifestString = "appmanifest_310380.acf";
+    const appManifestString = "appmanifest_310380.acf";
+    try {
+        let appManifests = fs.readdirSync(steamappsPath);
 
-    var appManifests = fs.readdirSync(steamappsPath);
-    appManifests.forEach(function (file) {
-        if (file === appManifestString) {
-            callback(steamappsPath + "/common/Space");
-            return true;
+        appManifests.forEach(function (file) {
+            if (file === appManifestString) {
+                callback(steamappsPath + "/common/Space");
+                return true;
+            }
+        });
+    } catch (err) {
+        if (err.code === 'ENOENT') {
+            console.log('Dir not found: ' + err);
+        } else {
+            throw err;
         }
-    });
+    }
 
     return false;
 }

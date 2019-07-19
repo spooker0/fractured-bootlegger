@@ -96,7 +96,8 @@
     utils.on('LobbyReachableStateChanged', onLobbyReachableStateChanged.bind(this));
     onLobbyReachableStateChanged( DataStore.isLobbyReachable );
     onSteamConnectionStateChanged( DataStore.isSteamConnected );
-
+    
+    engine.call('UpdatePlayerRegions', ["lon", "nyc", "lax", "hk"], "lax");
   }
 
   function onFillLobbyWithBots(botId) {
