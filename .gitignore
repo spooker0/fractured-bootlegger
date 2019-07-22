@@ -63,3 +63,4 @@ typings/
 electron-builder.yml
 
 dist/
+package-lock.json
