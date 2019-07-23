@@ -4,6 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const registry = require('winreg');
 const vdf = require("vdf");
+const child_process = require('child_process');
 
 const dataMapping = [
     {
@@ -25,15 +26,37 @@ const dataMapping = [
     {
         src: "startgame-style.css",
         dest: "spacegame/Content/UIResources/frontend/views/startgame/startgame-style.css"
+    },
+    {
+        src: "gamemodes-config.js",
+        dest: "spacegame/Content/UIResources/frontend/views/gamemodes/gamemodes-config.js"
+    },
+    {
+        src: "nsloctext.js",
+        dest: "spacegame/Content/UIResources/frontend/data/translations/nsloctext.js"
     }
 ];
 
-let button = document.getElementById("pick-directory");
-button.addEventListener("click", (el) => {
+let launchButton = document.getElementById("launch-game");
+launchButton.addEventListener("click", (el) => {
+    findSteamFolder((folder) => {
+        child_process.exec('"' + folder.replace(/\\\\/g, "/") + '/startclient-original.bat"', (error, stdout, stderr) => {
+            console.log(error);
+            console.log(stdout);
+            console.log(stderr);
+        });
+
+        launchButton.textContent = "Game launched";
+        launchButton.classList.add("disabled");
+    });
+});
+
+let installButton = document.getElementById("install-files");
+installButton.addEventListener("click", (el) => {
     findSteamFolder((folder) => {
         replaceFiles(folder.replace(/\\\\/g, "/"));
-        button.textContent = "Installed files";
-        button.classList.add("disabled");
+        installButton.textContent = "Installed files";
+        installButton.classList.add("disabled");
     });
 });
 

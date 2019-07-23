@@ -96,8 +96,6 @@
     utils.on('LobbyReachableStateChanged', onLobbyReachableStateChanged.bind(this));
     onLobbyReachableStateChanged( DataStore.isLobbyReachable );
     onSteamConnectionStateChanged( DataStore.isSteamConnected );
-    
-    engine.call('UpdatePlayerRegions', ["lon", "nyc", "lax", "hk"], "lax");
   }
 
   function onFillLobbyWithBots(botId) {
@@ -853,6 +851,8 @@
 
     Sessions.prototype = {
       init: function init(options) {
+        engine.call('UpdatePlayerRegions', ["lon", "nyc", "lax", "hk"], "lax");
+
         this.el = options.el;
         this.elList = this.el.querySelector('.servers-list');
         this.elSpec = VIEW.el.querySelector('.button-servers-spectator');

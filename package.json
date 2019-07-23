@@ -1,6 +1,6 @@
 {
     "name": "fractured-bootlegger",
-    "version": "1.1.2",
+    "version": "1.2.0",
     "description": "Bootlegged Installer for Fractured Space",
     "author": "rukqoa",
     "repository": {
@@ -29,9 +29,9 @@
             "./data/**"
         ],
         "nsis": {
-            "oneClick": false,
+            "oneClick": true,
             "perMachine": true,
-            "allowToChangeInstallationDirectory": true
+            "allowToChangeInstallationDirectory": false
         }
     }
 }

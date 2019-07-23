@@ -5,28 +5,38 @@
     <title>Fractured Bootlegger</title>
     <style>
         .myButton {
-            background-color: #44c767;
-            -moz-border-radius: 28px;
-            -webkit-border-radius: 28px;
-            border-radius: 28px;
-            border: 1px solid #18ab29;
-            display: inline-block;
+            display: block;
             cursor: pointer;
             color: #ffffff;
             font-family: Arial;
-            font-size: 17px;
-            padding: 16px 56px;
+            font-size: 25px;
+            padding: 21px 66px;
             text-decoration: none;
-            text-shadow: 0px 1px 0px #2f6627;
-        }
-
-        .myButton:hover:not(.disabled) {
-            background-color: #5cbf2a;
         }
 
         .myButton:active:not(.disabled) {
             position: relative;
             top: 1px;
+        }
+
+        #install-files:not(.disabled) {
+            background-color: #4C9A2A;
+        }
+
+        #install-files:hover:not(.disabled) {
+            background-color: #76BA1B;
+        }
+
+        #launch-game:not(.disabled) {
+            background-color: #1261A0;
+        }
+
+        #launch-game:hover:not(.disabled) {
+            background-color: #3895D3;
+        }
+
+        p {
+            text-align: center;
         }
 
         .disabled {
@@ -35,7 +45,8 @@
     </style>
 </head>
 <body>
-<a href="#" class="myButton" id="pick-directory">Install Files</a>
+<p><a href="#" class="myButton" id="install-files">1. Install Files</a></p>
+<p><a href="#" class="myButton" id="launch-game">2. Launch Game</a></p>
 <script src="./renderer.js"></script>
 </body>
 </html>
