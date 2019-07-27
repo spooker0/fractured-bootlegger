@@ -13,13 +13,12 @@
         "pack": "electron-builder --dir"
     },
     "devDependencies": {
-        "electron": "^5.0.7",
-        "electron-builder": "20.38.5"
+        "electron": "^5.0.8",
+        "electron-builder": "^21.1.5"
     },
     "dependencies": {
-        "build": "^0.1.4",
         "electron-updater": "^4.1.2",
-        "regedit": "^3.0.2",
+        "find-process": "^1.4.2",
         "vdf": "0.0.2",
         "winreg": "^1.2.4"
     },
@@ -29,9 +28,9 @@
             "./data/**"
         ],
         "nsis": {
-            "oneClick": true,
+            "oneClick": false,
             "perMachine": true,
-            "allowToChangeInstallationDirectory": false
+            "allowToChangeInstallationDirectory": true
         }
     }
 }

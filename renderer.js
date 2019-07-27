@@ -4,6 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const registry = require('winreg');
 const vdf = require("vdf");
+const find_process = require('find-process');
 const child_process = require('child_process');
 
 const dataMapping = [
@@ -48,6 +49,19 @@ launchButton.addEventListener("click", (el) => {
 
         launchButton.textContent = "Game launched";
         launchButton.classList.add("disabled");
+
+        let gameUpChecker = setInterval(() => {
+            find_process('name', "Fractured Space.exe")
+                .then(function (list) {
+                    if (list.length === 0) {
+                        launchButton.textContent = "2. Launch Game";
+                        launchButton.classList.remove("disabled");
+                        clearInterval(gameUpChecker);
+                    }
+                }, function (err) {
+                    console.log(err.stack || err);
+                })
+        }, 5000);
     });
 });
 
