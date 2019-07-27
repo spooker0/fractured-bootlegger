@@ -35,6 +35,10 @@ const dataMapping = [
     {
         src: "nsloctext.js",
         dest: "spacegame/Content/UIResources/frontend/data/translations/nsloctext.js"
+    },
+    {
+        src: "BP.pak",
+        dest: "spacegame/Content/Paks/BP.pak"
     }
 ];
 
