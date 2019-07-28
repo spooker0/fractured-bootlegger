@@ -1,10 +1,9 @@
 const electron = require("electron");
-const dialog = electron.remote.dialog;
 const path = require('path');
 const fs = require('fs');
 const registry = require('winreg');
 const vdf = require("vdf");
-const find_process = require('find-process');
+const find_process = require('find-process/index');
 const child_process = require('child_process');
 
 const dataMapping = [
@@ -42,6 +41,15 @@ const dataMapping = [
     }
 ];
 
+let installButton = document.getElementById("install-files");
+installButton.addEventListener("click", (el) => {
+    findSteamFolder((folder) => {
+        replaceFiles(folder.replace(/\\\\/g, "/"));
+        installButton.textContent = "Installed files";
+        installButton.classList.add("disabled");
+    });
+});
+
 let launchButton = document.getElementById("launch-game");
 launchButton.addEventListener("click", (el) => {
     findSteamFolder((folder) => {
@@ -69,14 +77,6 @@ launchButton.addEventListener("click", (el) => {
     });
 });
 
-let installButton = document.getElementById("install-files");
-installButton.addEventListener("click", (el) => {
-    findSteamFolder((folder) => {
-        replaceFiles(folder.replace(/\\\\/g, "/"));
-        installButton.textContent = "Installed files";
-        installButton.classList.add("disabled");
-    });
-});
 
 function replaceFiles(directory) {
     dataMapping.forEach((v) => {

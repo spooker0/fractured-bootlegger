@@ -64,3 +64,4 @@ electron-builder.yml
 
 dist/
 package-lock.json
+views/login/cache.html

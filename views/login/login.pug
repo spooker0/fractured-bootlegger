@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    #login.center-vertical
+        form.card.card-body.bg-light(method='post', action='https://doublecolossus.com/')
+            h2 Hello!
+            h6 Please Login To Your Account
+            .form-group
+                label Email
+                input.form-control(type='text', name='email')#email-tf
+            .form-group
+                label Password
+                input.form-control(type='password', name='pass')#pass-tf
+            #row1
+                button(type='button')#btn_remember.btn.btn-light.btn-left
+                    span.fa.fa-check-square
+                    | Remember Me
+                button(type='submit')#btn_sign_in.btn.btn-primary
+                    span.fa.fa-lock
+                    | Sign In
+            hr
+            .btm-links
+                #forgot-password
+                    a(href='#') Forgot Your Password?
+                #create-account
+                    a(href='#') Create An Account
+
+    include modals/alert
+    include modals/lost-password
+
+block scripts
+    script(src='js/login.js')
+    script(src='js/LoginValidator.js')
+    script(src='js/EmailValidator.js')

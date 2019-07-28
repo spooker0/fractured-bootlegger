@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f9fe;
+    -webkit-user-select: none;
+    -webkit-app-region: no-drag;
+}
+
+h1, h3 {
+    text-align: center;
+}
