@@ -1,6 +1,7 @@
 const pug = require('pug');
 const fs = require('fs');
 const remote = require('electron').remote;
+const storage = require('electron-json-storage');
 
 $(document).ready(() => {
 
@@ -21,15 +22,20 @@ $(document).ready(() => {
         },
         success: (responseText, status) => {
             if (status === 'success') {
+                storage.set('cookie', {'login': responseText.cookie}, function (error) {
+                    if (error)
+                        console.err(error);
+                });
+
                 let params = {
                     title: 'Home',
                     udata: responseText
                 };
 
                 let appPath = remote.app.getAppPath();
-                let html = pug.renderFile(appPath + '/views/login/home.pug', params);
+                let html = pug.renderFile(appPath + '/views/home.pug', params);
                 remote.getCurrentWindow().loadURL('data:text/html,' + encodeURIComponent(html), {
-                    baseURLForDataURL: `file://${appPath}/views/login/`
+                    baseURLForDataURL: `file://${appPath}/views/`
                 });
             }
         },
@@ -94,9 +100,9 @@ $(document).ready(() => {
         };
 
         let appPath = remote.app.getAppPath();
-        let html = pug.renderFile(appPath + '/views/login/register.pug', params);
+        let html = pug.renderFile(appPath + '/views/register.pug', params);
         remote.getCurrentWindow().loadURL('data:text/html,' + encodeURIComponent(html), {
-            baseURLForDataURL: `file://${appPath}/views/login/`
+            baseURLForDataURL: `file://${appPath}/views/`
         });
     });
 

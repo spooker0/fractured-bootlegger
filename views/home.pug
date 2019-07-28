@@ -3,7 +3,13 @@ extends layout
 block content
     nav.navbar.navbar-expand.navbar-light.bg-light
         .nav-item
-            .navbar-brand Control Panel
+            .navbar-brand#welcome-name Welcome
+        .nav-item
+            .navbar-brand |
+        .nav-item
+            button.navbar-brand(type='button').btn.btn-success#install-files Install
+        .nav-item
+            button.navbar-brand(type='button').btn.btn-primary#launch-game Play
         .navbar-nav.ml-auto
             .nav-item
                 button.btn.navbar-btn.btn-outline-dark#btn-logout Sign Out

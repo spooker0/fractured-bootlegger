@@ -1,9 +1,12 @@
 const {app, BrowserWindow, ipcMain, dialog} = require('electron');
 const {autoUpdater} = require("electron-updater");
-const electronPug = require('electron-pug');
+const pug = require('pug');
+const storage = require('electron-json-storage');
+const request = require('request');
+
 
 let mainWindow, updateWindow;
-let pug;
+let appPath = app.getAppPath();
 
 async function createInstallWindow() {
     mainWindow = new BrowserWindow({
@@ -14,7 +17,14 @@ async function createInstallWindow() {
         }
     });
 
-    mainWindow.loadFile('views/launcher/launcher.pug');
+    let params = {
+        title: 'Launcher'
+    };
+
+    let html = pug.renderFile(appPath + '/views/launcher.pug', params);
+    mainWindow.loadURL('data:text/html,' + encodeURIComponent(html), {
+        baseURLForDataURL: `file://${appPath}/views/`
+    });
 
     mainWindow.on('closed', function () {
         mainWindow = null;
@@ -30,7 +40,42 @@ async function createLoginWindow() {
         }
     });
 
-    mainWindow.loadFile('views/login/login.pug');
+
+    storage.get('cookie', function (error, data) {
+        if (error)
+            console.err(error);
+        let cookie = data.login;
+
+        let postData = {
+            cookie: cookie
+        };
+
+
+        request.post('https://doublecolossus.com/autologin', {json: postData}, (error, response, body) => {
+            console.log(error);
+            if (!error && response.statusCode === 200) {
+                let params = {
+                    title: 'Home',
+                    udata: body
+                };
+
+                let html = pug.renderFile(appPath + '/views/home.pug', params);
+                mainWindow.loadURL('data:text/html,' + encodeURIComponent(html), {
+                    baseURLForDataURL: `file://${appPath}/views/`
+                });
+            } else {
+                let params = {
+                    title: 'Login'
+                };
+
+                let html = pug.renderFile(appPath + '/views/login.pug', params);
+                mainWindow.loadURL('data:text/html,' + encodeURIComponent(html), {
+                    baseURLForDataURL: `file://${appPath}/views/`
+                });
+            }
+        });
+    });
+
 
     // mainWindow.removeMenu();
     // mainWindow.webContents.openDevTools();
@@ -52,7 +97,14 @@ async function createUpdateWindow() {
         }
     });
 
-    updateWindow.loadFile('views/launcher/update.pug');
+    let params = {
+        title: 'Launcher'
+    };
+
+    let html = pug.renderFile(appPath + '/views/update.pug', params);
+    updateWindow.loadURL('data:text/html,' + encodeURIComponent(html), {
+        baseURLForDataURL: `file://${appPath}/views/`
+    });
 
     updateWindow.removeMenu();
 
@@ -62,7 +114,6 @@ async function createUpdateWindow() {
 }
 
 app.on('ready', async () => {
-    pug = await electronPug({pretty: true});
     await createUpdateWindow();
     autoUpdater.checkForUpdates();
 });
@@ -76,7 +127,7 @@ autoUpdater.on('update-available', (info) => {
 });
 
 autoUpdater.on('update-not-available', async (info) => {
-    await createInstallWindow();
+    await createLoginWindow();
     updateWindow.close();
 });
 

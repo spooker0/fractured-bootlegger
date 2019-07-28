@@ -44,9 +44,9 @@ $(document).ready(function () {
         };
 
         let appPath = remote.app.getAppPath();
-        let html = pug.renderFile(appPath + '/views/login/login.pug', params);
+        let html = pug.renderFile(appPath + '/views/login.pug', params);
         remote.getCurrentWindow().loadURL('data:text/html,' + encodeURIComponent(html), {
-            baseURLForDataURL: `file://${appPath}/views/login/`
+            baseURLForDataURL: `file://${appPath}/views/`
         });
     }
 });
