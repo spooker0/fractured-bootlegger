@@ -40,7 +40,6 @@ async function createLoginWindow() {
         }
     });
 
-
     storage.get('cookie', function (error, data) {
         if (error)
             console.err(error);
@@ -52,10 +51,9 @@ async function createLoginWindow() {
 
 
         request.post('https://doublecolossus.com/autologin', {json: postData}, (error, response, body) => {
-            console.log(error);
             if (!error && response.statusCode === 200) {
                 let params = {
-                    title: 'Home',
+                    title: 'Fractured Bootlegger',
                     udata: body
                 };
 

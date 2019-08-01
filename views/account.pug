@@ -1,6 +1,7 @@
 - user = typeof(udata) != 'undefined' ? udata : { }
 input(type='hidden', value= user._id)#userId
 input(type='hidden', value= user.user)#userName
+input(type='hidden', value= user.guid)#guid
 
 #account-form-container.center-vertical
     - var url = 'https://doublecolossus.com/' + (creation ? 'register': 'home')

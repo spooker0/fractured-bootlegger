@@ -320,8 +320,8 @@
   }
 
   function leaveLobby() {
-    engine.call('LeaveLobby');
-    utils.dispatch('ResetCreditsTicker');
+    //engine.call('LeaveLobby');
+    //utils.dispatch('ResetCreditsTicker');
   }
 
   function showLobbyLeaveWarning(callback) {

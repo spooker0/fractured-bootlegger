@@ -28,7 +28,7 @@ $(document).ready(() => {
                 });
 
                 let params = {
-                    title: 'Home',
+                    title: 'Fractured Bootlegger',
                     udata: responseText
                 };
 

@@ -20,10 +20,6 @@ const dataMapping = [
         dest: "spacegame/ClientConfig.json"
     },
     {
-        src: "startclient-original.bat",
-        dest: "startclient-original.bat"
-    },
-    {
         src: "startgame-script.js",
         dest: "spacegame/Content/UIResources/frontend/views/startgame/startgame-script.js"
     },
@@ -128,7 +124,6 @@ $(document).ready(() => {
         });
     });
 
-
     let installButton = $('#install-files');
     installButton.click(() => {
         findSteamFolder((folder) => {
@@ -140,11 +135,19 @@ $(document).ready(() => {
     let launchButton = $('#launch-game');
     launchButton.click(() => {
         findSteamFolder((folder) => {
-            child_process.exec('"' + folder.replace(/\\\\/g, "/") + '/startclient-original.bat"', (error, stdout, stderr) => {
-                console.log(error);
-                console.log(stdout);
-                console.log(stderr);
-            });
+            let launchPath = '"' + folder.replace(/\\\\/g, "/") + '/spacegame/Binaries/Win64/Fractured Space.exe"';
+            let guid = $('#guid').val();
+            let username = $('#userName').val();
+            let host = ' -flhost=https://lifeline.returnvector.net';
+            let launchCmd = 'set SteamAppId=310380 & ' + launchPath + host + ' -netid=' + guid + ' -nick=' + username;
+
+            console.log(launchCmd)
+            child_process.exec(launchCmd,
+                (error, stdout, stderr) => {
+                    console.log(error);
+                    console.log(stdout);
+                    console.log(stderr);
+                });
 
             launchButton.html('Playing');
             launchButton.addClass("disabled");
@@ -198,6 +201,11 @@ function replaceFiles(directory) {
 }
 
 function findSteamFolder(callback) {
+    if (fs.existsSync("Space")) {
+        callback("Space");
+        return;
+    }
+
     let regKey = new registry({
         hive: registry.HKLM,
         key: '\\SOFTWARE\\Wow6432Node\\Valve\\Steam'

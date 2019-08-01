@@ -3,33 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="02131b25-1af4-4d29-88fe-777a3dd6c0ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Fractured Space.exe" beforeDir="false" afterPath="$PROJECT_DIR$/data/Fractured Space.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/startclient-original.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/startgame-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/data/startgame-script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/launcher/launchRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/launchRenderer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/launcher/launcher.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/launcher.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/launcher/launcher.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/launcher.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/launcher/update.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/update.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/launcher/updateRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/updateRenderer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/launcher/updater.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/updater.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/404.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/404.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/account.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/account.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/home.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/js/AccountValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/AccountValidator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/js/EmailValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/EmailValidator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/js/LoginValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/LoginValidator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/login.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/modals/alert.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/modals/alert.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/modals/confirm.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/modals/confirm.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/modals/form-errors.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/modals/form-errors.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/modals/lost-password.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/modals/lost-password.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/modals/reset-password.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/modals/reset-password.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login/register.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/account.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/account.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/js/updateRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/updateRenderer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,26 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/js/home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/js/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="22" selection-start-line="3" selection-end-line="4" />
+            <state relative-caret-position="595">
+              <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -72,17 +37,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/account.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+            <state>
+              <caret column="2" selection-start-column="2" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/js/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="48" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/js/AccountValidator.js">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="66" column="65" selection-start-line="66" selection-start-column="65" selection-end-line="66" selection-end-column="65" />
+            <state relative-caret-position="34">
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/home.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/js/home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="135" column="30" selection-start-line="135" selection-start-column="30" selection-end-line="135" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -140,18 +132,18 @@
         <option value="$PROJECT_DIR$/views/launcher/updater.css" />
         <option value="$PROJECT_DIR$/views/launcher/launcher.css" />
         <option value="$PROJECT_DIR$/views/login/home.pug" />
-        <option value="$PROJECT_DIR$/views/js/updateRenderer.js" />
         <option value="$PROJECT_DIR$/views/js/register.js" />
         <option value="$PROJECT_DIR$/views/update.pug" />
         <option value="$PROJECT_DIR$/views/launcher.pug" />
         <option value="$PROJECT_DIR$/views/js/launchRenderer.js" />
-        <option value="$PROJECT_DIR$/views/home.pug" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/views/js/login.js" />
-        <option value="$PROJECT_DIR$/views/js/home.js" />
-        <option value="$PROJECT_DIR$/views/account.pug" />
         <option value="$PROJECT_DIR$/views/js/AccountValidator.js" />
+        <option value="$PROJECT_DIR$/views/js/updateRenderer.js" />
+        <option value="$PROJECT_DIR$/views/home.pug" />
+        <option value="$PROJECT_DIR$/views/account.pug" />
+        <option value="$PROJECT_DIR$/views/js/home.js" />
+        <option value="$PROJECT_DIR$/views/js/login.js" />
+        <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -166,7 +158,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,6 +192,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,12 +282,14 @@
       <workItem from="1564275089492" duration="16063000" />
       <workItem from="1564302872626" duration="211000" />
       <workItem from="1564321175908" duration="8746000" />
-      <workItem from="1564357161892" duration="580000" />
+      <workItem from="1564357161892" duration="650000" />
+      <workItem from="1564684671736" duration="7212000" />
+      <workItem from="1564691992473" duration="2400000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54258000" />
+    <option name="totallyTimeSpent" value="63940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -411,13 +405,6 @@
     <entry file="file://$PROJECT_DIR$/views/js/LoginValidator.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/updateRenderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="37" selection-start-column="37" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/js/register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="729">
@@ -431,24 +418,10 @@
     <entry file="file://$PROJECT_DIR$/views/404.pug">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/register.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/update.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -459,38 +432,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/home.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/launcher.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -501,30 +446,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" selection-start-line="3" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/modals/confirm.pug">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/views/modals/form-errors.pug">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/account.pug">
+    <entry file="file://$PROJECT_DIR$/views/js/AccountValidator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="19" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+        <state relative-caret-position="409">
+          <caret line="51" column="2" lean-forward="true" selection-start-line="51" selection-end-line="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/AccountValidator.js">
+    <entry file="file://$PROJECT_DIR$/views/js/updateRenderer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="66" column="65" selection-start-line="66" selection-start-column="65" selection-end-line="66" selection-end-column="65" />
+        <state relative-caret-position="85">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/update.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/node/globals.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="186" column="4" selection-start-line="186" selection-start-column="4" selection-end-line="186" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/webtorrent/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="82" column="27" lean-forward="true" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="135" column="30" selection-start-line="135" selection-start-column="30" selection-end-line="135" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="48" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/account.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="66" column="18" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
