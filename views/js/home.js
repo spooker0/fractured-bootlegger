@@ -38,7 +38,12 @@ const dataMapping = [
     {
         src: "BP.pak",
         dest: "spacegame/Content/Paks/BP.pak"
-    }
+    },
+    {
+        src: "results-script.js",
+        dest: "spacegame/Content/UIResources/frontend/views/results/results-script.js"
+    },
+
 ];
 
 $(document).ready(() => {
