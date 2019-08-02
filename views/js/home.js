@@ -139,7 +139,8 @@ $(document).ready(() => {
             let guid = $('#guid').val();
             let username = $('#userName').val();
             let host = ' -flhost=https://lifeline.returnvector.net';
-            let launchCmd = 'set SteamAppId=310380 & ' + launchPath + host + ' -netid=' + guid + ' -nick=' + username;
+            let langHotfix = ' -culture=en-GB';
+            let launchCmd = 'set SteamAppId=310380 & ' + launchPath + host + ' -netid=' + guid + ' -nick=' + username + langHotfix;
 
             console.log(launchCmd)
             child_process.exec(launchCmd,
