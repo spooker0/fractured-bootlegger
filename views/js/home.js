@@ -43,7 +43,10 @@ const dataMapping = [
         src: "results-script.js",
         dest: "spacegame/Content/UIResources/frontend/views/results/results-script.js"
     },
-
+    {
+        src: "hangar-script.js",
+        dest: "spacegame/Content/UIResources/frontend/views/hangar/hangar-script.js"
+    }
 ];
 
 $(document).ready(() => {

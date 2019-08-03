@@ -1,6 +1,6 @@
 {
     "name": "fractured-bootlegger",
-    "version": "3.0.0",
+    "version": "3.1.0",
     "description": "Bootlegged Installer for Fractured Space",
     "author": "rukqoa",
     "repository": {
@@ -40,9 +40,9 @@
             "target": "nsis-web"
         },
         "nsisWeb": {
-            "oneClick": false,
+            "oneClick": true,
             "perMachine": true,
-            "allowToChangeInstallationDirectory": true,
+            "allowToChangeInstallationDirectory": false,
             "differentialPackage": true
         }
     }
