@@ -64,7 +64,29 @@ $(document).ready(() => {
                 $('.modal-alert .modal-header h4').text('Success!');
                 $('.modal-alert .modal-body p').html('Your account has been updated.');
                 modalAlert.modal('show');
-                $('.modal-alert button').off('click');
+
+                $('.modal-alert button').click(function () {
+                    refreshPage();
+                });
+                setTimeout(refreshPage, 3000);
+
+                function refreshPage() {
+                    let params = {
+                        title: 'Fractured Bootlegger',
+                        udata: {
+                            _id: $('#userId').val(),
+                            email: $('#email-tf').val(),
+                            user: $('#user-tf').val(),
+                            guid: $('#guid').val()
+                        }
+                    };
+
+                    let appPath = remote.app.getAppPath();
+                    let html = pug.renderFile(appPath + '/views/home.pug', params);
+                    remote.getCurrentWindow().loadURL('data:text/html,' + encodeURIComponent(html), {
+                        baseURLForDataURL: `file://${appPath}/views/`
+                    });
+                }
             }
         },
         error: error => {
@@ -188,7 +210,6 @@ function showLockedAlert(message) {
         sendToRoot();
     });
     setTimeout(sendToRoot, 3000);
-
 }
 
 function sendToRoot() {
