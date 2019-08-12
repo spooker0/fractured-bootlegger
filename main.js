@@ -1,4 +1,4 @@
-const {app, BrowserWindow, ipcMain, dialog} = require('electron');
+const {app, BrowserWindow, ipcMain, dialog, session, cookies} = require('electron');
 const {autoUpdater} = require("electron-updater");
 const pug = require('pug');
 const storage = require('electron-json-storage');
@@ -8,72 +8,18 @@ const request = require('request');
 let mainWindow, updateWindow;
 let appPath = app.getAppPath();
 
-async function createInstallWindow() {
+async function createDiscordWindow() {
     mainWindow = new BrowserWindow({
         width: 800,
-        height: 600,
+        height: 800,
         webPreferences: {
-            nodeIntegration: true
+            preload: appPath + '/views/js/preload.js',
+            nodeIntegration: false,
+            contextIsolation: false
         }
     });
 
-    let params = {
-        title: 'Launcher'
-    };
-
-    let html = pug.renderFile(appPath + '/views/launcher.pug', params);
-    mainWindow.loadURL('data:text/html,' + encodeURIComponent(html), {
-        baseURLForDataURL: `file://${appPath}/views/`
-    });
-
-    mainWindow.on('closed', function () {
-        mainWindow = null;
-    });
-}
-
-async function createLoginWindow() {
-    mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
-        webPreferences: {
-            nodeIntegration: true
-        }
-    });
-
-    storage.get('cookie', function (error, data) {
-        if (error)
-            console.err(error);
-        let cookie = data.login;
-
-        let postData = {
-            cookie: cookie
-        };
-
-
-        request.post('https://doublecolossus.com/autologin', {json: postData}, (error, response, body) => {
-            if (!error && response.statusCode === 200) {
-                let params = {
-                    title: 'Fractured Bootlegger',
-                    udata: body
-                };
-
-                let html = pug.renderFile(appPath + '/views/home.pug', params);
-                mainWindow.loadURL('data:text/html,' + encodeURIComponent(html), {
-                    baseURLForDataURL: `file://${appPath}/views/`
-                });
-            } else {
-                let params = {
-                    title: 'Login'
-                };
-
-                let html = pug.renderFile(appPath + '/views/login.pug', params);
-                mainWindow.loadURL('data:text/html,' + encodeURIComponent(html), {
-                    baseURLForDataURL: `file://${appPath}/views/`
-                });
-            }
-        });
-    });
-
+    mainWindow.loadURL('https://doublecolossus.com/');
 
     // mainWindow.removeMenu();
     // mainWindow.webContents.openDevTools();
@@ -82,6 +28,28 @@ async function createLoginWindow() {
     mainWindow.on('closed', function () {
         mainWindow = null;
     });
+
+    let cookies = session.defaultSession.cookies;
+    cookies.on('changed', function (event, cookie, cause, removed) {
+        if (!cookie.session || removed) {
+            return;
+        }
+
+        let url = `${(!cookie.httpOnly && cookie.secure) ? 'https' : 'http'}://${cookie.domain}${cookie.path}`;
+        cookies.set({
+            url: url,
+            name: cookie.name,
+            value: cookie.value,
+            domain: cookie.domain,
+            path: cookie.path,
+            secure: cookie.secure,
+            httpOnly: cookie.httpOnly,
+            expirationDate: Math.floor(new Date().getTime() / 1000) + 1209600
+        }, function (err) {
+            if (err) console.log(err);
+        });
+    });
+
 }
 
 async function createUpdateWindow() {
@@ -125,7 +93,7 @@ autoUpdater.on('update-available', (info) => {
 });
 
 autoUpdater.on('update-not-available', async (info) => {
-    await createLoginWindow();
+    await createDiscordWindow();
     updateWindow.close();
 });
 
