@@ -1,7 +1,6 @@
 const {app, BrowserWindow, ipcMain, dialog, session, cookies} = require('electron');
 const {autoUpdater} = require("electron-updater");
 const pug = require('pug');
-const storage = require('electron-json-storage');
 const request = require('request');
 
 

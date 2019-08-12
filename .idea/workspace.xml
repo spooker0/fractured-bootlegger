@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02131b25-1af4-4d29-88fe-777a3dd6c0ee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="51">
+              <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -36,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/js/find-steam.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-257">
+            <state relative-caret-position="136">
               <caret line="8" column="5" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
             </state>
           </provider>
@@ -45,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/js/installer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+            <state relative-caret-position="1020">
+              <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -153,6 +155,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,7 +184,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -285,12 +287,13 @@
       <workItem from="1564917410959" duration="243000" />
       <workItem from="1565280325460" duration="3391000" />
       <workItem from="1565516370918" duration="4803000" />
-      <workItem from="1565587381541" duration="5590000" />
+      <workItem from="1565587381541" duration="6192000" />
+      <workItem from="1565594213480" duration="46000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86453000" />
+    <option name="totallyTimeSpent" value="87101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -358,13 +361,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/login/js/ResetValidator.js" />
     <entry file="file://$PROJECT_DIR$/views/login/js/reset.js" />
-    <entry file="file://$PROJECT_DIR$/views/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/views/css/login.css" />
     <entry file="file://$PROJECT_DIR$/node_modules/electron-updater/out/AppUpdater.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -372,80 +369,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/css/launcher.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/EmailValidator.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/LoginValidator.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/modals/alert.pug">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/404.pug">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/register.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/launchRenderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="147" lean-forward="true" selection-start-line="43" selection-end-line="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/launcher.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/modals/confirm.pug">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/modals/form-errors.pug">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/AccountValidator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="51" column="2" lean-forward="true" selection-start-line="51" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/updateRenderer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/views/css/launcher.css" />
+    <entry file="file://$PROJECT_DIR$/views/js/EmailValidator.js" />
+    <entry file="file://$PROJECT_DIR$/views/js/LoginValidator.js" />
+    <entry file="file://$PROJECT_DIR$/views/js/register.js" />
+    <entry file="file://$PROJECT_DIR$/views/modals/alert.pug" />
+    <entry file="file://$PROJECT_DIR$/views/404.pug" />
+    <entry file="file://$PROJECT_DIR$/views/register.pug" />
+    <entry file="file://$PROJECT_DIR$/views/js/launchRenderer.js" />
+    <entry file="file://$PROJECT_DIR$/views/launcher.pug" />
+    <entry file="file://$PROJECT_DIR$/views/login.pug" />
+    <entry file="file://$PROJECT_DIR$/views/modals/confirm.pug" />
+    <entry file="file://$PROJECT_DIR$/views/modals/form-errors.pug" />
+    <entry file="file://$PROJECT_DIR$/views/js/AccountValidator.js" />
+    <entry file="file://$PROJECT_DIR$/views/js/updateRenderer.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/@types/node/globals.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -477,41 +414,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/home.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/account.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="50" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/js/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="27" selection-start-line="10" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home.pug" />
+    <entry file="file://$PROJECT_DIR$/views/js/login.js" />
+    <entry file="file://$PROJECT_DIR$/views/account.pug" />
+    <entry file="file://$PROJECT_DIR$/views/js/home.js" />
+    <entry file="file://$PROJECT_DIR$/views/layout.pug" />
     <entry file="file://$PROJECT_DIR$/views/update.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -535,15 +442,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/js/find-steam.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-257">
+        <state relative-caret-position="136">
           <caret line="8" column="5" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/js/installer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+        <state relative-caret-position="1020">
+          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -556,8 +463,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="51">
+          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>
