@@ -19,6 +19,7 @@ async function createDiscordWindow() {
     });
 
     mainWindow.loadURL('https://doublecolossus.com/');
+    // mainWindow.loadURL('http://localhost/');
 
     // mainWindow.removeMenu();
     // mainWindow.webContents.openDevTools();
