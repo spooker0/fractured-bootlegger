@@ -19,7 +19,7 @@
     "dependencies": {
         "create-torrent": "^4.0.0",
         "electron-updater": "^4.1.2",
-        "pug": "^2.0.4",
+        "pug": "^3.0.1",
         "request": "^2.88.0",
         "vdf": "0.0.2",
         "winreg": "^1.2.4"
